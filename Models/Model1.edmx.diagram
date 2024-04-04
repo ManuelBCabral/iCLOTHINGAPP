@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="71107a0d66e44f42a48788c9759b371a" Name="Diagram1">
+        <EntityTypeShape EntityType="Group12_iCLOTHINGDBModel.ABOUTUS" Width="1.5" PointX="3" PointY="31.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Group12_iCLOTHINGDBModel.ADMINISTRATOR" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Group12_iCLOTHINGDBModel.BRAND" Width="1.5" PointX="1.5" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Group12_iCLOTHINGDBModel.CATEGORY" Width="1.5" PointX="1.5" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Group12_iCLOTHINGDBModel.CUSTOMER" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Group12_iCLOTHINGDBModel.DEPARTMENT" Width="1.5" PointX="1.5" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Group12_iCLOTHINGDBModel.EMAIL" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="Group12_iCLOTHINGDBModel.ITEMDELIVERY" Width="1.5" PointX="6" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Group12_iCLOTHINGDBModel.ORDERSTATUS" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Group12_iCLOTHINGDBModel.PRODUCT" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Group12_iCLOTHINGDBModel.SHOPPINGCART" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Group12_iCLOTHINGDBModel.sysdiagrams" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Group12_iCLOTHINGDBModel.USERCOMMENTS" Width="1.5" PointX="3" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="Group12_iCLOTHINGDBModel.USERPASSWORD" Width="1.5" PointX="3" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Group12_iCLOTHINGDBModel.USERQUERY" Width="1.5" PointX="3" PointY="21.625" IsExpanded="true" />
+        <AssociationConnector Association="Group12_iCLOTHINGDBModel.FK__ABOUTUS__ADMINID__31B762FC" ManuallyRouted="false" />
+        <AssociationConnector Association="Group12_iCLOTHINGDBModel.FK__EMAIL__ADMINID__29221CFB" ManuallyRouted="false" />
+        <AssociationConnector Association="Group12_iCLOTHINGDBModel.FK__PRODUCT__BRANDID__19DFD96B" ManuallyRouted="false" />
+        <AssociationConnector Association="Group12_iCLOTHINGDBModel.FK__CATEGORY__DEPID__151B244E" ManuallyRouted="false" />
+        <AssociationConnector Association="Group12_iCLOTHINGDBModel.FK__PRODUCT__CATID__1AD3FDA4" ManuallyRouted="false" />
+        <AssociationConnector Association="Group12_iCLOTHINGDBModel.FK__EMAIL__USERID__282DF8C2" ManuallyRouted="false" />
+        <AssociationConnector Association="Group12_iCLOTHINGDBModel.FK__ITEMDELIV__CUSTI__2DE6D218" ManuallyRouted="false" />
+        <AssociationConnector Association="Group12_iCLOTHINGDBModel.FK__SHOPPINGC__CUSTI__208CD6FA" ManuallyRouted="false" />
+        <AssociationConnector Association="Group12_iCLOTHINGDBModel.FK__USERCOMME__CUSTI__1DB06A4F" ManuallyRouted="false" />
+        <AssociationConnector Association="Group12_iCLOTHINGDBModel.FK__USERPASSW__USERI__09A971A2" ManuallyRouted="false" />
+        <AssociationConnector Association="Group12_iCLOTHINGDBModel.FK__USERQUERY__CUSTI__10566F31" ManuallyRouted="false" />
+        <AssociationConnector Association="Group12_iCLOTHINGDBModel.FK__ITEMDELIV__PROID__2EDAF651" ManuallyRouted="false" />
+        <AssociationConnector Association="Group12_iCLOTHINGDBModel.FK__ORDERSTAT__CARTI__25518C17" ManuallyRouted="false" />
+        <AssociationConnector Association="Group12_iCLOTHINGDBModel.FK__SHOPPINGC__PRODI__2180FB33" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

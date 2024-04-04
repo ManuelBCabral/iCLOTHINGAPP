@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Group12_iCLOTHINGAPP.Models.CUSTOMER>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SHIPPINGADDRESS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BILLINGADDRESS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GENDER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USERPASSWORD.ACCNAME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SHIPPINGADDRESS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BILLINGADDRESS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GENDER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USERPASSWORD.ACCNAME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CUSTOMERID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CUSTOMERID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CUSTOMERID })
+        </td>
+    </tr>
+}
+
+</table>

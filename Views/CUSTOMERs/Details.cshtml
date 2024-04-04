@@ -1,0 +1,66 @@
+﻿@model Group12_iCLOTHINGAPP.Models.CUSTOMER
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CUSTOMER</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SHIPPINGADDRESS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SHIPPINGADDRESS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BILLINGADDRESS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BILLINGADDRESS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GENDER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GENDER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USERPASSWORD.ACCNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USERPASSWORD.ACCNAME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CUSTOMERID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
