@@ -1,0 +1,64 @@
+﻿@model Group12_iCLOTHINGAPP.Models.USERPASSWORD
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>USERPASSWORD</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ACCNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACCNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENCRYPTPASS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENCRYPTPASS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PASSEXPIRYTIME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PASSEXPIRYTIME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACCEXPITYDATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACCEXPITYDATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CUSTOMER.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUSTOMER.NAME)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

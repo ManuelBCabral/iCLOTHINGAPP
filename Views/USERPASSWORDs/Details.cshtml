@@ -1,0 +1,58 @@
+﻿@model Group12_iCLOTHINGAPP.Models.USERPASSWORD
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>USERPASSWORD</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ACCNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACCNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENCRYPTPASS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENCRYPTPASS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PASSEXPIRYTIME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PASSEXPIRYTIME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACCEXPITYDATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACCEXPITYDATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CUSTOMER.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUSTOMER.NAME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.USERID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

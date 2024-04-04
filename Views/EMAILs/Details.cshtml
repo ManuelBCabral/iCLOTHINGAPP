@@ -1,0 +1,58 @@
+﻿@model Group12_iCLOTHINGAPP.Models.EMAIL
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EMAIL</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAILDATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAILDATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAILSUB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAILSUB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAILBODY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAILBODY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ADMINISTRATOR.ADMINNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ADMINISTRATOR.ADMINNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CUSTOMER.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUSTOMER.NAME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EMAILNO }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,42 @@
+﻿@model Group12_iCLOTHINGAPP.Models.ORDERSTATUS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ORDERSTATUS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.STATUS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STATUS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STATUSDATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STATUSDATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SHOPPINGCART.CUSTID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SHOPPINGCART.CUSTID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.STATUSID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,42 @@
+﻿@model Group12_iCLOTHINGAPP.Models.ADMINISTRATOR
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ADMINISTRATOR</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ADMINNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ADMINNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ADMINEMAIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ADMINEMAIL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DATEHIRED)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATEHIRED)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ADMINID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

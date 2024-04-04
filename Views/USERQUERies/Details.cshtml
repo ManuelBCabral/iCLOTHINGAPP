@@ -1,0 +1,42 @@
+﻿@model Group12_iCLOTHINGAPP.Models.USERQUERY
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>USERQUERY</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.QUERYDATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QUERYDATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QUEDESCRIPTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QUEDESCRIPTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CUSTOMER.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUSTOMER.NAME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.QUERYNO }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

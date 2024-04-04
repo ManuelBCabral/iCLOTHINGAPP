@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Group12_iCLOTHINGAPP.Models.USERQUERY>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.QUERYDATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QUEDESCRIPTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CUSTOMER.NAME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.QUERYDATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QUEDESCRIPTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CUSTOMER.NAME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.QUERYNO }) |
+            @Html.ActionLink("Details", "Details", new { id=item.QUERYNO }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.QUERYNO })
+        </td>
+    </tr>
+}
+
+</table>

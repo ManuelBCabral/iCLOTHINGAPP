@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Group12_iCLOTHINGAPP.Models.ADMINISTRATOR>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ADMINNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ADMINEMAIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DATEHIRED)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ADMINNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ADMINEMAIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DATEHIRED)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ADMINID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ADMINID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ADMINID })
+        </td>
+    </tr>
+}
+
+</table>

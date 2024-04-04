@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Group12_iCLOTHINGAPP.Models.ORDERSTATUS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.STATUS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STATUSDATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SHOPPINGCART.CUSTID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.STATUS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STATUSDATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SHOPPINGCART.CUSTID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.STATUSID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.STATUSID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.STATUSID })
+        </td>
+    </tr>
+}
+
+</table>

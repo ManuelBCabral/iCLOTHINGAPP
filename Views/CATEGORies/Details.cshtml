@@ -1,0 +1,42 @@
+﻿@model Group12_iCLOTHINGAPP.Models.CATEGORY
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CATEGORY</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CATNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CATNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DESCRIPTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESCRIPTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DEPARTMENT.DEPNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEPARTMENT.DEPNAME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CATID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

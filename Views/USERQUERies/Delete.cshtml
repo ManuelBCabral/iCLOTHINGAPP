@@ -1,0 +1,48 @@
+﻿@model Group12_iCLOTHINGAPP.Models.USERQUERY
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>USERQUERY</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.QUERYDATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QUERYDATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QUEDESCRIPTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QUEDESCRIPTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CUSTOMER.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUSTOMER.NAME)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
