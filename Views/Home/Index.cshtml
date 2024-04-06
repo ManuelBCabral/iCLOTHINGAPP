@@ -1,67 +1,169 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>iClothing System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .w3-sidebar a {
+            font-family: "Roboto", sans-serif
+        }
+
+        body, h1, h2, h3, h4, h5, h6, .w3-wide {
+            font-family: "Montserrat", sans-serif;
+        }
+    </style>
+</head>
+<body class="w3-content" style="max-width:1200px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+
+        <div class="gridbox-container" style="font-weight:bold">
+            <a href="" class="grid-item>Shirts!!</a>
+            <a href="#" class="w3-bar-item w3-button">Dresses</a>
+            <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+                Jeans <i class="fa fa-caret-down"></i>
+            </a>
+            <a href="#" class="w3-bar-item w3-button">Jackets</a>
+            <a href="#" class="w3-bar-item w3-button">Gymwear</a>
+            <a href="#" class="w3-bar-item w3-button">Shoes</a>
+        </div>
+        <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a>
+        <a href="#footer" class="w3-bar-item w3-button w3-padding">Subscribe</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:250px">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+
+        <!-- Top header -->
+        <header class="w3-container w3-xlarge">
+            <p class="w3-left">iCLOTHING</p>
+            <p class="w3-right">
+                <i class="fa fa-shopping-cart w3-margin-right"></i>
+                <i class="fa fa-search"></i>
+            </p>
+        </header>
+
+        <!-- Product grid -->
+        <div class="w3-row w3-grayscale">
+            <div class="w3-col l3 s6">
+                <div class="w3-container">
+                    <img src="/w3images/jeans1.jpg" style="width:100%">
+                    <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
+                </div>
+                <div class="w3-container">
+                    <img src="/w3images/jeans2.jpg" style="width:100%">
+                    <p>Mega Ripped Jeans<br><b>$19.99</b></p>
+                </div>
+            </div>
+
+            <div class="w3-col l3 s6">
+                <div class="w3-container">
+                    <div class="w3-display-container">
+                        <img src="/w3images/jeans2.jpg" style="width:100%">
+                        <span class="w3-tag w3-display-topleft">New</span>
+                        <div class="w3-display-middle w3-display-hover">
+                            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                    <p>Mega Ripped Jeans<br><b>$19.99</b></p>
+                </div>
+                <div class="w3-container">
+                    <img src="/w3images/jeans3.jpg" style="width:100%">
+                    <p>Washed Skinny Jeans<br><b>$20.50</b></p>
+                </div>
+            </div>
+
+            <div class="w3-col l3 s6">
+                <div class="w3-container">
+                    <img src="/w3images/jeans3.jpg" style="width:100%">
+                    <p>Washed Skinny Jeans<br><b>$20.50</b></p>
+                </div>
+                <div class="w3-container">
+                    <div class="w3-display-container">
+                        <img src="/w3images/jeans4.jpg" style="width:100%">
+                        <span class="w3-tag w3-display-topleft">Sale</span>
+                        <div class="w3-display-middle w3-display-hover">
+                            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                    <p>Vintage Skinny Jeans<br><b class="w3-text-red">$14.99</b></p>
+                </div>
+            </div>
+
+            <div class="w3-col l3 s6">
+                <div class="w3-container">
+                    <img src="/w3images/jeans4.jpg" style="width:100%">
+                    <p>Vintage Skinny Jeans<br><b>$14.99</b></p>
+                </div>
+                <div class="w3-container">
+                    <img src="/w3images/jeans1.jpg" style="width:100%">
+                    <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+            <div class="gridbox-container">
+                <div class="grid-item">
+                    <h4><li>@Html.ActionLink("About Us", "Index", "ABOUTUS")</li></h4>
+
+                </div>
+                <div class="grid-item">
+                    <h4>Store</h4>
+                    <p><i class="fa fa-fw fa-map-marker"></i> Columbia, MO</p>
+                    <p><i class="fa fa-fw fa-phone"></i> 417-728-6413</p>
+                    <p><i class="fa fa-fw fa-envelope"></i> BlasinoDawgs@iClothing.com</p>
+                    <h4>We accept</h4>
+                    <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
+                    <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+                    <h4>LinkedIns</h4>
+                    <a href="https://www.linkedin.com/in/eric-chin01/" class="fa fa-linkedin w3-hover-opacity w3-large"> Eric </a>
+                    <a href="https://www.linkedin.com/in/johnathon-brumfield-16a5a5248/" class="fa fa-linkedin w3-hover-opacity w3-large"> Johnathon </a>
+                    <a href="https://www.linkedin.com/in/manuel-sur-474308290/" class="fa fa-linkedin w3-hover-opacity w3-large"> Manuel </a>
+                </div>
+        </footer>
+
+        <script>
+// Accordion
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
 }
 
-<div class="jumbotron">
-    <h1>iCLOTHING DATABASE VIEW</h1>
-    <p class="lead">Special website designed to view aspects of iCLOHING database system.</p>
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
 
 
-</div>
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>@Html.ActionLink("Customers", "Index", "CUSTOMERs")</h2>
-        <p>List of all Customers .</p>
-    </div>
-    <div class="col-md-4">
-        <h2>@Html.ActionLink("Password", "Index", "USERPASSWORDs")</h2>
-        <p>List of all user passwords.</p>
-    </div>
-    <div class="col-md-4">
-        <h2>@Html.ActionLink("Administrator", "Index", "ADMINISTRATORs")</h2>
-        <p>List of all administrators.</p>
-    </div>
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+        </script>
 
-    <div class="col-md-4">
-        <h2>@Html.ActionLink("Categories", "Index", "CATEGORies")</h2>
-        <p>List of all categories.</p>
-    </div>
-    <div class="col-md-4">
-        <h2>@Html.ActionLink("Departments", "Index", "DEPARTMENTs")</h2>
-        <p>List of all departments.</p>
-    </div>
-    <div class="col-md-4">
-        <h2>@Html.ActionLink("Brands", "Index", "BRANDs")</h2>
-        <p>List of all brands.</p>
-    </div>
-    <div class="col-md-4">
-        <h2>@Html.ActionLink("Products", "Index", "PRODUCTs")</h2>
-        <p>List of all products.</p>
-    </div>
-    <div class="col-md-4">
-        <h2>@Html.ActionLink("ShoppingCart", "Index", "SHOPPINGCARTs")</h2>
-        <p>List of all shoppingcarts.</p>
-    </div>
-    <div class="col-md-4">
-        <h2>@Html.ActionLink("Item Delivery", "Index", "ITEMDELIVERies")</h2>
-        <p>List of all categories.</p>
-    </div>
-    <div class="col-md-4">
-        <h2>@Html.ActionLink("Emails", "Index", "EMAILs")</h2>
-        <p>List of all categories.</p>
-    </div>
-    <div class="col-md-4">
-        <h2>@Html.ActionLink("Order Status", "Index", "ORDERSTATUS")</h2>
-        <p>List of all order status.</p>
-    </div>
-    <div class="col-md-4">
-        <h2>@Html.ActionLink("Comments", "Index", "USERCOMMENTS")</h2>
-        <p>List of all user comments.</p>
-    </div>
-    <div class="col-md-4">
-        <h2>@Html.ActionLink("Queries", "Index", "USERQUERies")</h2>
-        <p>List of all user queries.</p>
-    </div>
-
-</div>
+</body>
+</html>
