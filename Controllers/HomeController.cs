@@ -66,5 +66,30 @@ namespace Group12_iCLOTHINGAPP.Controllers
                 }
             }
         }
+        public ActionResult AdminLogin()
+        {
+            ViewBag.Message = "Login";
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AdminLogin(ADMINISTRATOR objUser)
+        {
+            if (ModelState.IsValid)
+            {
+                using (Group12_iCLOTHINGDBEntities2 db = new Group12_iCLOTHINGDBEntities2())
+                {
+                    var obj = db.ADMINISTRATOR.Where(a => a.ADMINID.Equals(objUser.ADMINID)).FirstOrDefault();
+                    if (obj != null)
+                    {
+                        //Session["UserID"] = obj.UserId.ToString();
+                        Session["UserName"] = obj.ADMINNAME.ToString();
+                        return RedirectToAction("AdminDashBoard");
+                    }
+                }
+            }
+            return View(objUser);
+        }
     }
 }

@@ -1,0 +1,37 @@
+﻿@model Group12_iCLOTHINGAPP.Models.ADMINISTRATOR
+
+@{
+    ViewBag.Title = "AdminLogin";
+}
+
+@using (Html.BeginForm("AdminLogin", "Home", FormMethod.Post))
+{
+    <fieldset>
+        <legend></legend>
+
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        @if (ViewBag.Message != null)
+        {
+            <p style="border: 1px solid
+red">
+                @ViewBag.Message
+            </p>
+        }
+
+        <table>
+            <tr>
+                <td>@Html.LabelFor(a => a.ADMINID)</td>
+                <td>@Html.TextBoxFor(a => a.ADMINID)</td>
+                <td>@Html.ValidationMessageFor(a => a.ADMINID)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Login" /></td>
+                <td></td>
+            </tr>
+        </table>
+    </fieldset>
+}
+
