@@ -1,0 +1,15 @@
+﻿@model Group12_iCLOTHINGAPP.Models.USERPASSWORD
+
+@{
+    ViewBag.Title = "UserDashboard";
+}
+
+<fieldset>
+    <legend>User Dashboard</legend>
+
+    @if (Session["UserName"] != null)
+    {
+        <text>Welcome @Session["UserName"].ToString()</text>
+    }
+</fieldset>
+
