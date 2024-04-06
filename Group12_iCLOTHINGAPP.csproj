@@ -129,6 +129,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ABOUTUS1Controller.cs" />
     <Compile Include="Controllers\ABOUTUSController.cs" />
     <Compile Include="Controllers\ADMINISTRATORsController.cs" />
     <Compile Include="Controllers\BRANDsController.cs" />
@@ -347,9 +348,15 @@
     <Content Include="Views\USERQUERies\Details.cshtml" />
     <Content Include="Views\USERQUERies\Edit.cshtml" />
     <Content Include="Views\USERQUERies\Index.cshtml" />
+    <Content Include="Views\ABOUTUS1\Create.cshtml" />
+    <Content Include="Views\ABOUTUS1\Delete.cshtml" />
+    <Content Include="Views\ABOUTUS1\Details.cshtml" />
+    <Content Include="Views\ABOUTUS1\Edit.cshtml" />
+    <Content Include="Views\ABOUTUS1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

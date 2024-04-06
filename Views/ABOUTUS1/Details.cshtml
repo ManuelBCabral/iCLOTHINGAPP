@@ -1,0 +1,58 @@
+﻿@model Group12_iCLOTHINGAPP.Models.ABOUTUS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ABOUTUS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SHIPPPOLICY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SHIPPPOLICY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RETURNPOL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RETURNPOL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CONTACTINFO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CONTACTINFO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ABDESCRIPTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ABDESCRIPTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ADMINISTRATOR.ADMINNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ADMINISTRATOR.ADMINNAME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.COMPNAME }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

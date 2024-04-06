@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Group12_iCLOTHINGAPP.Models.ABOUTUS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SHIPPPOLICY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RETURNPOL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CONTACTINFO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ABDESCRIPTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ADMINISTRATOR.ADMINNAME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SHIPPPOLICY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RETURNPOL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CONTACTINFO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ABDESCRIPTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ADMINISTRATOR.ADMINNAME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.COMPNAME }) |
+            @Html.ActionLink("Details", "Details", new { id=item.COMPNAME }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.COMPNAME })
+        </td>
+    </tr>
+}
+
+</table>
