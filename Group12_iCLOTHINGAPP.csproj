@@ -347,6 +347,7 @@
     <Content Include="Views\USERQUERies\Details.cshtml" />
     <Content Include="Views\USERQUERies\Edit.cshtml" />
     <Content Include="Views\USERQUERies\Index.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

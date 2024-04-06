@@ -1,0 +1,42 @@
+﻿@model Group12_iCLOTHINGAPP.Models.USERPASSWORD
+
+@{
+    ViewBag.Title = "Login";
+}
+
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+    <fieldset>
+        <legend>Mvc Simple Login Application Demo</legend>
+
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        @if (ViewBag.Message != null)
+        {
+            <p style="border: 1px solid
+red">
+                @ViewBag.Message
+            </p>
+        }
+
+        <table>
+            <tr>
+                <td>@Html.LabelFor(a => a.ACCNAME)</td>
+                <td>@Html.TextBoxFor(a => a.ACCNAME)</td>
+                <td>@Html.ValidationMessageFor(a => a.ACCNAME)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(a => a.ENCRYPTPASS)</td>
+                <td>@Html.PasswordFor(a => a.ENCRYPTPASS)</td>
+                <td>@Html.ValidationMessageFor(a => a.ENCRYPTPASS)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Login" /></td>
+                <td></td>
+            </tr>
+        </table>
+    </fieldset>
+}
+
