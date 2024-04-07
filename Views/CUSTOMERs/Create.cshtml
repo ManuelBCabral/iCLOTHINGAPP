@@ -63,17 +63,43 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <!-- 
+            <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
-
 <div>
     @Html.ActionLink("Create Password", "Create","USERPASSWORDs")
 </div>
+ -->
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <!-- Your form fields here -->
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="button" value="Create and Go to Create Password" class="btn btn-default" onclick="submitFormAndRedirect()" />
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script>
+    function submitFormAndRedirect() {
+        document.getElementById('createForm').submit();
+        
+        window.location.href = '@Url.Action("Create", "USERPASSWORDs")';
+    }
+</script>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
