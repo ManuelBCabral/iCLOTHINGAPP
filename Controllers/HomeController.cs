@@ -96,6 +96,11 @@ namespace Group12_iCLOTHINGAPP.Controllers
             ViewBag.Message = "PreLogin";
             return View();
         }
+        public ActionResult AdminDashboard()
+        {
+            ViewBag.Message = "AdminDashboard";
+            return View();
+        }
     }
 
 }
