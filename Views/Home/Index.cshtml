@@ -16,6 +16,17 @@
         body, h1, h2, h3, h4, h5, h6, .w3-wide {
             font-family: "Montserrat", sans-serif;
         }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #000f;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="w3-content" style="max-width:1200px">
@@ -54,9 +65,8 @@
         <header class="w3-container w3-xlarge">
             <p class="w3-left">iCLOTHING</p>
             <p class="w3-right">
-                <a href=@Url.Action("Login", "PreLogin", "Home")>Login</a>
-                @*<h1><li>@Html.ActionLink("Login", "PreLogin", "Home")</li></h1>*@
-                <i href="" class="fa fa-search"></i>
+
+                    <li>@Html.ActionLink("Login", "PreLogin", "Home", new { @class = "button"})</li>
             </p>
         </header>
 
