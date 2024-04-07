@@ -22,7 +22,7 @@
 
     <!-- Sidebar/menu -->
     <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
-
+        
         <div class="gridbox-container" style="font-weight:bold">
             <a href="" class="grid-item>Shirts!!</a>
             <a href="#" class="w3-bar-item w3-button">Dresses</a>
@@ -39,6 +39,7 @@
     </nav>
 
     <!-- Top menu on small screens -->
+
     <!-- Overlay effect when opening sidebar on small screens -->
     <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
@@ -121,6 +122,8 @@
             <div class="gridbox-container">
                 <div class="grid-item">
                     <h4><li>@Html.ActionLink("About Us", "Index", "ABOUTUS")</li></h4>
+                    <h4><li>@Html.ActionLink("Login", "PreLogin", "Home")</li></h4>
+
 
                 </div>
                 <div class="grid-item">
@@ -132,13 +135,13 @@
                     <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
                     <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
                     <h4>LinkedIns</h4>
-                    <a href="https://www.linkedin.com/in/eric-chin01/" class="fa fa-linkedin w3-hover-opacity w3-large"> Eric </a>
-                    <a href="https://www.linkedin.com/in/johnathon-brumfield-16a5a5248/" class="fa fa-linkedin w3-hover-opacity w3-large"> Johnathon </a>
-                    <a href="https://www.linkedin.com/in/manuel-sur-474308290/" class="fa fa-linkedin w3-hover-opacity w3-large"> Manuel </a>
+                    <a href ="https://www.linkedin.com/in/eric-chin01/"class="fa fa-linkedin w3-hover-opacity w3-large"> Eric </a>
+                    <a href ="https://www.linkedin.com/in/johnathon-brumfield-16a5a5248/"class="fa fa-linkedin w3-hover-opacity w3-large"> Johnathon </a>
+                    <a href ="https://www.linkedin.com/in/manuel-sur-474308290/"class="fa fa-linkedin w3-hover-opacity w3-large"> Manuel </a>
                 </div>
-        </footer>
+</footer>
 
-        <script>
+    <script>
 // Accordion
 function myAccFunc() {
   var x = document.getElementById("demoAcc");
@@ -163,7 +166,7 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
-        </script>
+    </script>
 
 </body>
 </html>

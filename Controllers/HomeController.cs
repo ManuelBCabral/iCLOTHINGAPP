@@ -91,5 +91,11 @@ namespace Group12_iCLOTHINGAPP.Controllers
             }
             return View(objUser);
         }
+        public ActionResult PreLogin()
+        {
+            ViewBag.Message = "PreLogin";
+            return View();
+        }
     }
+
 }

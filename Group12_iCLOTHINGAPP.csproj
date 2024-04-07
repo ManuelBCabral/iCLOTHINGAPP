@@ -351,6 +351,7 @@
     <Content Include="Views\Home\UserDashboard.cshtml" />
     <Content Include="Views\Home\AdminLogin.cshtml" />
     <Content Include="Views\Home\AdminDashboard.cshtml" />
+    <Content Include="Views\Home\PreLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
