@@ -352,6 +352,7 @@
     <Content Include="Views\Home\AdminLogin.cshtml" />
     <Content Include="Views\Home\AdminDashboard.cshtml" />
     <Content Include="Views\Home\PreLogin.cshtml" />
+    <Content Include="Views\DEPARTMENTs\CustomerView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

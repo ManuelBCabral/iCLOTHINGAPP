@@ -6,9 +6,9 @@
 
 <h2>Departments</h2>
 
-<p>
+@*<p>
     @Html.ActionLink("Create New", "Create")
-</p>
+</p>*@
 <table class="table">
     <tr>
         <th>
@@ -29,9 +29,9 @@
             @Html.DisplayFor(modelItem => item.DESCRIPTION)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.DEPID }) |
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.DEPID }) |*@
             @Html.ActionLink("Details", "Details", new { id=item.DEPID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.DEPID })
+            @*@Html.ActionLink("Delete", "Delete", new { id=item.DEPID })*@
         </td>
     </tr>
 }
