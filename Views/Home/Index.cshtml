@@ -23,9 +23,9 @@
     <!-- Sidebar/menu -->
     <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
 
+            
         <div class="w3-container w3-display-container w3-padding-16">
-            <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-            <h3 class="w3-wide"><b>CS 4320</b></h3>
+            <img src="~/Images/Screenshot 2024-04-07 163315.png" style="width:100%">
         </div>
 
         <div class="gridbox-container" style="font-weight:bold">
@@ -41,8 +41,6 @@
         </div>
     </nav>
 
-    <!-- Top menu on small screens -->
-
     <!-- Overlay effect when opening sidebar on small screens -->
     <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
@@ -56,8 +54,8 @@
         <header class="w3-container w3-xlarge">
             <p class="w3-left">iCLOTHING</p>
             <p class="w3-right">
-                <i class="fa fa-shopping-cart w3-margin-right"></i>
-                <i class="fa fa-search"></i>
+                <a href='@Url.Action("Login", "PreLogin", "Home")'>Login</a>
+                <i href="" class="fa fa-search"></i>
             </p>
         </header>
 
@@ -65,44 +63,38 @@
         <div class="w3-row w3-grayscale">
             <div class="w3-col l3 s6">
                 <div class="w3-container">
-                    <img src="/w3images/jeans1.jpg" style="width:100%">
-                    <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
+                    <img src="~/Images/BapeJacket.jpg" style="width:100%">
+                    <p>Bape Jacket<br><b>$59.99</b></p>
                 </div>
                 <div class="w3-container">
-                    <img src="/w3images/jeans2.jpg" style="width:100%">
-                    <p>Mega Ripped Jeans<br><b>$19.99</b></p>
+                    <img src="~/Images/JeansEX1.jpg" style="width:100%">
+                    <p>Limited Edition Jeans<br><b>$29.99</b></p>
                 </div>
             </div>
 
             <div class="w3-col l3 s6">
                 <div class="w3-container">
                     <div class="w3-display-container">
-                        <img src="/w3images/jeans2.jpg" style="width:100%">
+                        <img src="~/Images/HighWaistSkirt.jpg" style="width:100%">
                         <span class="w3-tag w3-display-topleft">New</span>
-                        <div class="w3-display-middle w3-display-hover">
-                            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-                        </div>
                     </div>
-                    <p>Mega Ripped Jeans<br><b>$19.99</b></p>
+                    <p>High Waist Skirt<br><b>$19.99</b></p>
                 </div>
                 <div class="w3-container">
-                    <img src="/w3images/jeans3.jpg" style="width:100%">
-                    <p>Washed Skinny Jeans<br><b>$20.50</b></p>
+                    <img src="~/Images/WomensSundress.jpg" style="width:100%">
+                    <p>Womens Sundress<br><b>$20.50</b></p>
                 </div>
             </div>
 
             <div class="w3-col l3 s6">
                 <div class="w3-container">
-                    <img src="/w3images/jeans3.jpg" style="width:100%">
-                    <p>Washed Skinny Jeans<br><b>$20.50</b></p>
+                    <img src="~/Images/AthleticShorts.jpg" style="width:100%">
+                    <p>Athletic Shorts<br><b>$20.50</b></p>
                 </div>
                 <div class="w3-container">
                     <div class="w3-display-container">
-                        <img src="/w3images/jeans4.jpg" style="width:100%">
+                        <img src="~/Images\WomensJeans.jpg" style="width:100%">
                         <span class="w3-tag w3-display-topleft">Sale</span>
-                        <div class="w3-display-middle w3-display-hover">
-                            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-                        </div>
                     </div>
                     <p>Vintage Skinny Jeans<br><b class="w3-text-red">$14.99</b></p>
                 </div>
@@ -110,12 +102,12 @@
 
             <div class="w3-col l3 s6">
                 <div class="w3-container">
-                    <img src="/w3images/jeans4.jpg" style="width:100%">
-                    <p>Vintage Skinny Jeans<br><b>$14.99</b></p>
+                    <img src="~/Images/kidShorts.jpg" style="width:100%">
+                    <p>Red Kids Shorts<br><b>$14.99</b></p>
                 </div>
                 <div class="w3-container">
-                    <img src="/w3images/jeans1.jpg" style="width:100%">
-                    <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
+                    <img src="~/Images/KidTshirt.jpg" style="width:100%">
+                    <p>White Kids T-shirt<br><b>$24.99</b></p>
                 </div>
             </div>
         </div>
@@ -125,8 +117,6 @@
             <div class="gridbox-container">
                 <div class="grid-item">
                     <h4><li>@Html.ActionLink("About Us", "Index", "ABOUTUS")</li></h4>
-                    <h4><li>@Html.ActionLink("Login", "PreLogin", "Home")</li></h4>
-
 
                 </div>
                 <div class="grid-item">
@@ -138,38 +128,38 @@
                     <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
                     <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
                     <h4>LinkedIns</h4>
-                    <a href ="https://www.linkedin.com/in/eric-chin01/"class="fa fa-linkedin w3-hover-opacity w3-large"> Eric </a>
-                    <a href ="https://www.linkedin.com/in/johnathon-brumfield-16a5a5248/"class="fa fa-linkedin w3-hover-opacity w3-large"> Johnathon </a>
-                    <a href ="https://www.linkedin.com/in/manuel-sur-474308290/"class="fa fa-linkedin w3-hover-opacity w3-large"> Manuel </a>
+                    <a href="https://www.linkedin.com/in/eric-chin01/" class="fa fa-linkedin w3-hover-opacity w3-large"> Eric </a>
+                    <a href="https://www.linkedin.com/in/johnathon-brumfield-16a5a5248/" class="fa fa-linkedin w3-hover-opacity w3-large"> Johnathon </a>
+                    <a href="https://www.linkedin.com/in/manuel-sur-474308290/" class="fa fa-linkedin w3-hover-opacity w3-large"> Manuel </a>
                 </div>
-</footer>
+        </footer>
 
-    <script>
-// Accordion
-function myAccFunc() {
-  var x = document.getElementById("demoAcc");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
+        <script>
+            // Accordion
+            function myAccFunc() {
+                var x = document.getElementById("demoAcc");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
 
-// Click on the "Jeans" link on page load to open the accordion for demo purposes
-document.getElementById("myBtn").click();
+            // Click on the "Jeans" link on page load to open the accordion for demo purposes
+            document.getElementById("myBtn").click();
 
 
-// Open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
+            // Open and close sidebar
+            function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("myOverlay").style.display = "block";
+            }
 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-    </script>
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("myOverlay").style.display = "none";
+            }
+        </script>
 
 </body>
 </html>
