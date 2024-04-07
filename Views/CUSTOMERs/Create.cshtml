@@ -7,7 +7,8 @@
 <h2>Create</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "createForm" })) 
+
 {
     @Html.AntiForgeryToken()
     
@@ -63,30 +64,17 @@
             </div>
         </div>
 
-        <!-- 
+
             <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Create and Go to Create Password" class="btn btn-default" onclick = "return submitFormAndRedirect()" />
             </div>
-        </div>-->
+        </div>
     </div>
 
 <div>
     @Html.ActionLink("Create Password", "Create","USERPASSWORDs")
 </div>
- 
-
-    
-    <div class="form-horizontal">
-        <!-- Your form fields here -->
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="button" value="Create and Go to Create Password" class="btn btn-default" onclick="submitFormAndRedirect()" />
-            </div>
-        </div>
-    </div>
-}
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
@@ -96,6 +84,7 @@
             document.getElementById('createForm').submit();
             
             window.location.href = '@Url.Action("Create", "USERPASSWORDs")';
+            return false; 
         }
     </script>
 }
