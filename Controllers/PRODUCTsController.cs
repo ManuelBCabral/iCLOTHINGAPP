@@ -136,5 +136,9 @@ namespace Group12_iCLOTHINGAPP.Controllers
         {
             return View(db.PRODUCT.ToList());
         }
+        public ActionResult RegularView()
+        {
+            return View(db.PRODUCT.ToList());
+        }
     }
 }

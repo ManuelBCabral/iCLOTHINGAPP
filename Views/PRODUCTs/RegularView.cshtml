@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Group12_iCLOTHINGAPP.Models.PRODUCT>
 
 @{
-    ViewBag.Title = "CustomerView";
+    ViewBag.Title = "RegularView";
 }
 
 <h2>Products</h2>
@@ -55,9 +55,7 @@
             </td>
             <td>
                 @*@Html.ActionLink("Edit", "Edit", new { id=item.PRODUCTID }) |*@
-                @Html.ActionLink("Details", "Details", new { id = item.PRODUCTID })|
-                @Html.ActionLink("Add To Cart", "CustomerView", "SHOPPINGCARTs" )
-
+                @Html.ActionLink("Details", "Details", new { id = item.PRODUCTID })
                 @*@Html.ActionLink("Delete", "Delete", new { id=item.PRODUCTID })*@
             </td>
         </tr>
