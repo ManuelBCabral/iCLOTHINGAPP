@@ -132,5 +132,10 @@ namespace Group12_iCLOTHINGAPP.Controllers
             }
             base.Dispose(disposing);
         }
+        public ActionResult CustomerView()
+        {
+            return View(db.SHOPPINGCART.ToList());
+
+        }
     }
 }

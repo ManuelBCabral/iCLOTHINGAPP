@@ -51,10 +51,8 @@
 
             <div class="gridbox-container" style="font-weight:bold">
                 <h4>@Html.ActionLink("Add Department", "Create", "DEPARTMENTs")</h4>
-                <h4>@Html.ActionLink("Add Category", "Create", "CATEGORies")</h4>
-                <h4>@Html.ActionLink("Add Brand", "Create", "BRANDs")</h4>
-                <h4>@Html.ActionLink("Add Product", "Create", "PRODUCTs")</h4>
-                <h4>@Html.ActionLink("View User Comments", "Index", "USERCOMMENTS")</h4>
+                <h4>@Html.ActionLink("Departments", "Index", "DEPARTMENTs")</h4>
+                <h4>@Html.ActionLink("Categories", "Index", "Categories")</h4>
 
             </div>
         </nav>
@@ -134,7 +132,7 @@
             <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
                 <div class="gridbox-container">
                     <div class="grid-item">
-                        <h4><li>@Html.ActionLink("About Us", "Index", "ABOUTUS")</li></h4>
+                        <h4>@Html.ActionLink("About Us", "Index", "ABOUTUS")</h4>
 
                     </div>
                     <div class="grid-item">
@@ -182,10 +180,16 @@
     </body>
 </html>
 
-@*<text>Welcome @Session["UserName"].ToString()</text>*@
-
 @if (Session["UserName"] != null)
 {
+    <text>Welcome @Session["UserName"].ToString()</text>
+    <h1><li>@Html.ActionLink("Add Department", "Create", "DEPARTMENTs")</li></h1>
+    <h1><li>@Html.ActionLink("Add Category", "Create", "CATEGORies")</li></h1>
+    <h1><li>@Html.ActionLink("Add Brand", "Create", "BRANDs")</li></h1>
+    <h1><li>@Html.ActionLink("Add Product", "Create", "PRODUCTs")</li></h1>
+    <h1><li>@Html.ActionLink("View User Comments", "Index", "USERCOMMENTS")</li></h1>
+
+
 
 
 

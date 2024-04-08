@@ -353,6 +353,10 @@
     <Content Include="Views\Home\AdminDashboard.cshtml" />
     <Content Include="Views\Home\PreLogin.cshtml" />
     <Content Include="Views\DEPARTMENTs\CustomerView.cshtml" />
+    <Content Include="Views\CATEGORies\CustomerView.cshtml" />
+    <Content Include="Views\PRODUCTs\CustomerView.cshtml" />
+    <Content Include="Views\SHOPPINGCARTs\CustomerView.cshtml" />
+    <Content Include="Views\PRODUCTs\RegularView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

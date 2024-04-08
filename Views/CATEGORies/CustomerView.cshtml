@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Group12_iCLOTHINGAPP.Models.CATEGORY>
+
+@{
+    ViewBag.Title = "CustomerView";
+}
+
+<h2>CustomerView</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CATNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCRIPTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEPARTMENT.DEPNAME)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CATNAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DESCRIPTION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEPARTMENT.DEPNAME)
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.CATID }) |*@
+                @Html.ActionLink("Details", "Details", new { id = item.CATID }) 
+                @*@Html.ActionLink("Delete", "Delete", new { id = item.CATID })*@
+            </td>
+        </tr>
+    }
+
+</table>
