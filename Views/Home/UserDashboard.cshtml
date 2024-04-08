@@ -57,6 +57,7 @@
                 <h4>@Html.ActionLink("Departments", "Index", "DEPARTMENTs")</h4>
                 <h4>@Html.ActionLink("Categories", "Index", "Categories")</h4>
 
+
             </div>
         </nav>
 
@@ -154,30 +155,30 @@
             </footer>
 
             <script>
-            // Accordion
-            function myAccFunc() {
-                var x = document.getElementById("demoAcc");
-                if (x.className.indexOf("w3-show") == -1) {
-                    x.className += " w3-show";
-                } else {
-                    x.className = x.className.replace(" w3-show", "");
+                // Accordion
+                function myAccFunc() {
+                    var x = document.getElementById("demoAcc");
+                    if (x.className.indexOf("w3-show") == -1) {
+                        x.className += " w3-show";
+                    } else {
+                        x.className = x.className.replace(" w3-show", "");
+                    }
                 }
-            }
 
-            // Click on the "Jeans" link on page load to open the accordion for demo purposes
-            document.getElementById("myBtn").click();
+                // Click on the "Jeans" link on page load to open the accordion for demo purposes
+                document.getElementById("myBtn").click();
 
 
-            // Open and close sidebar
-            function w3_open() {
-                document.getElementById("mySidebar").style.display = "block";
-                document.getElementById("myOverlay").style.display = "block";
-            }
+                // Open and close sidebar
+                function w3_open() {
+                    document.getElementById("mySidebar").style.display = "block";
+                    document.getElementById("myOverlay").style.display = "block";
+                }
 
-            function w3_close() {
-                document.getElementById("mySidebar").style.display = "none";
-                document.getElementById("myOverlay").style.display = "none";
-            }
+                function w3_close() {
+                    document.getElementById("mySidebar").style.display = "none";
+                    document.getElementById("myOverlay").style.display = "none";
+                }
             </script>
 
     </body>
@@ -185,6 +186,7 @@
 
 @*<text>Welcome @Session["UserName"].ToString()</text>*@
 
+<h4>@Html.ActionLink("Shopping Cart", "CustomerView", "SHOPPINGCARTs")</h4>
 
 </fieldset>
 
