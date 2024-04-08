@@ -133,11 +133,21 @@ namespace Group12_iCLOTHINGAPP.Controllers
             return View(db.CATEGORY.ToList());
 
         }
+        //public ActionResult FilteredCustomerView()
+        //{
+        //    ViewBag.Message = "FilteredView";
+        //    return View();
+        //}
+
         public ActionResult FilteredCustomerView(CATEGORY objUser)
         {
             using (Group12_iCLOTHINGDBEntities2 db = new Group12_iCLOTHINGDBEntities2())
             {
                 var categories = db.CATEGORY.Where(c => c.DEPID == objUser.DEPID).ToList();
+                //if (categories != null)
+                //{
+
+                //}
                 return View(categories);
             }
 
