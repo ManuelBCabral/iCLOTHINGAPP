@@ -149,6 +149,14 @@ namespace Group12_iCLOTHINGAPP.Controllers
 
 
         }
+        public ActionResult FilteredRegularViewPro(string CatId)
+        {
+            using (Group12_iCLOTHINGDBEntities2 db = new Group12_iCLOTHINGDBEntities2())
+            {
+                var products = db.PRODUCT.Where(c => c.CATID == CatId).ToList();
+                return View(products);
+            }
+        }
         public ActionResult ShoppingCartView(string CustId) {
             using (Group12_iCLOTHINGDBEntities2 db = new Group12_iCLOTHINGDBEntities2())
             {
@@ -157,6 +165,11 @@ namespace Group12_iCLOTHINGAPP.Controllers
                 var products = db.SHOPPINGCART.Where(c => c.CUSTID == CustId).ToList();
                 return View(products);
             }
+        }
+        public ActionResult RegularView()
+        {
+            return View(db.DEPARTMENT.ToList());
+
         }
     }
 }

@@ -366,7 +366,9 @@
     <Content Include="Views\BRANDs\ShoppingCartView.cshtml" />
     <Content Include="Views\DEPARTMENTs\ShoppingCartView.cshtml" />
     <Content Include="Views\Home\ShoppingCartView.cshtml" />
-    <Content Include="Views\SHOPPINGCARTs\CreateShopp.cshtml" />
+    <Content Include="Views\ABOUTUS\CustomerView.cshtml" />
+    <Content Include="Views\DEPARTMENTs\FilteredRegularViewPro.cshtml" />
+    <Content Include="Views\DEPARTMENTs\RegularView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

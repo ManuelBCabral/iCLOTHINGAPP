@@ -65,8 +65,8 @@
 
         <div class="gridbox-container" style="font-weight:bold">
             <h4>@Html.ActionLink("Departments", "CustomerView", "DEPARTMENTs")</h4>
-            <h4>@Html.ActionLink("Categories", "CustomerView", "Categories")</h4>
-            <h4>@Html.ActionLink("Products", "CustomerView", "PRODUCTs")</h4>
+            @*<h4>@Html.ActionLink("Categories", "CustomerView", "Categories")</h4>*@
+            <h4>@Html.ActionLink("Products", "RegularView", "PRODUCTs")</h4>
             <h4>@Html.ActionLink("Brands", "CustomerView", "BRANDs")</h4>
         </div>
     </nav>
@@ -146,7 +146,7 @@
         <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
             <div class="gridbox-container">
                 <div class="grid-item">
-                    <h4>@Html.ActionLink("About Us", "Index", "ABOUTUS")</h4>
+                    <h4>@Html.ActionLink("About Us", "CustomerView", "ABOUTUS")</h4>
 
                 </div>
                 <div class="grid-item">

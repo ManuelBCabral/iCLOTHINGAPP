@@ -54,7 +54,7 @@ namespace Group12_iCLOTHINGAPP.Controllers
             {
                 db.USERCOMMENTS.Add(uSERCOMMENTS);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("UserDashBoard","Home");
             }
 
             ViewBag.CUSTID = new SelectList(db.CUSTOMER, "CUSTOMERID", "NAME", uSERCOMMENTS.CUSTID);

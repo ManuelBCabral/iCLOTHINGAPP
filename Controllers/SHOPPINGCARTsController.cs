@@ -143,11 +143,6 @@ namespace Group12_iCLOTHINGAPP.Controllers
             //return View(db.SHOPPINGCART.ToList());
 
         }
-        public ActionResult CreateShopp(string CustID, string proID)
-        {
-            ViewData["proID"] = proID;
-            return View();
-            
-        }
+
     }
 }
