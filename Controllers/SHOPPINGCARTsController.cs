@@ -143,6 +143,45 @@ namespace Group12_iCLOTHINGAPP.Controllers
             //return View(db.SHOPPINGCART.ToList());
 
         }
+<<<<<<< Updated upstream
+=======
+        public ActionResult CreateShopp(string CustID, string proID)
+        {
+            ViewData["proID"] = proID;
+            return View();
+            
+        }
+
+        public ActionResult AddToCart(string productId)
+        {
+           
+            string customerId = "YourCustomerId"; 
+
+            if (productId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var product = db.PRODUCT.Find(productId);
+            if (product == null)
+            {
+                return HttpNotFound();
+            }
+
+            SHOPPINGCART cartItem = new SHOPPINGCART
+            {
+                CUSTID = customerId,
+                PRODID = productId,
+                CARTPROPRICE = product.PRICE,
+                CARTPROQUANTITY = 1 
+            };
+
+            db.SHOPPINGCART.Add(cartItem);
+            db.SaveChanges();
+
+            return RedirectToAction(cartItem);
+        }
+>>>>>>> Stashed changes
 
     }
 }
