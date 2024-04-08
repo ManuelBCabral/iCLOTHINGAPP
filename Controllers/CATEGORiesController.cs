@@ -133,5 +133,11 @@ namespace Group12_iCLOTHINGAPP.Controllers
             return View(db.CATEGORY.ToList());
 
         }
+        public ActionResult FilteredCustomerView(CATEGORY objUser)
+        {
+            var categories = db.CATEGORY.Where(c => c.DEPID == objUser.DEPID).ToList(); 
+            return View(categories);
+
+        }
     }
 }
