@@ -97,7 +97,7 @@
                 <div class="btn-group">
 
                     <button> @Html.ActionLink("Logout", "Index", "Home")</button>
-                   
+
                 </div>
             </header>
 
@@ -150,16 +150,6 @@
 
 @if (Session["UserName"] != null)
 {
-    <text>Welcome @Session["UserName"].ToString()</text>
-    <h1><li>@Html.ActionLink("Add Department", "Create", "DEPARTMENTs")</li></h1>
-    <h1><li>@Html.ActionLink("Add Category", "Create", "CATEGORies")</li></h1>
-    <h1><li>@Html.ActionLink("Add Brand", "Create", "BRANDs")</li></h1>
-    <h1><li>@Html.ActionLink("Add Product", "Create", "PRODUCTs")</li></h1>
-    <h1><li>@Html.ActionLink("View User Comments", "Index", "USERCOMMENTS")</li></h1>
-
-
-
-
 
 }
 </fieldset>
