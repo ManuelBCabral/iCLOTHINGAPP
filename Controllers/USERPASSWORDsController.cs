@@ -54,7 +54,7 @@ namespace Group12_iCLOTHINGAPP.Controllers
             {
                 db.USERPASSWORD.Add(uSERPASSWORD);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Login","Home");
             }
 
             ViewBag.USERID = new SelectList(db.CUSTOMER, "CUSTOMERID", "NAME", uSERPASSWORD.USERID);
@@ -117,7 +117,7 @@ namespace Group12_iCLOTHINGAPP.Controllers
             USERPASSWORD uSERPASSWORD = db.USERPASSWORD.Find(id);
             db.USERPASSWORD.Remove(uSERPASSWORD);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Login","Home");
         }
 
         protected override void Dispose(bool disposing)

@@ -54,7 +54,9 @@ namespace Group12_iCLOTHINGAPP.Controllers
             {
                 db.CUSTOMER.Add(cUSTOMER);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Create","USERPASSWORDs");
+             
+
             }
 
             ViewBag.CUSTOMERID = new SelectList(db.USERPASSWORD, "USERID", "ACCNAME", cUSTOMER.CUSTOMERID);
