@@ -72,11 +72,10 @@
 
             <!-- Top header -->
             <header class="w3-container w3-xlarge">
-                <p class="w3-left">iCLOTHING</p>
-                <p class="w3-right">
-
+                <div class="btn-group">
                     <h4>@Html.ActionLink("Logout", "Index", "Home", new { @class = "button" })</h4>
-                </p>
+                    <h4>@Html.ActionLink("Shopping Cart", "CustomerView", "SHOPPINGCARTs", new { @class = "button" })</h4>
+                </div>
             </header>
 
             <!-- Product grid -->
@@ -186,7 +185,7 @@
 
 @*<text>Welcome @Session["UserName"].ToString()</text>*@
 
-<h4>@Html.ActionLink("Shopping Cart", "CustomerView", "SHOPPINGCARTs")</h4>
+
 
 </fieldset>
 
