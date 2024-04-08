@@ -6,9 +6,9 @@
 
 <h2>All Available Products</h2>
 
-@*<p>
+<p>
     @Html.ActionLink("Create New", "Create")
-</p>*@
+</p>
 <table class="table">
     <tr>
         <th>
@@ -53,9 +53,9 @@
             @Html.DisplayFor(modelItem => item.CATEGORY.CATNAME)
         </td>
         <td>
-            @*@Html.ActionLink("Edit", "Edit", new { id=item.PRODUCTID }) |*@
+            @Html.ActionLink("Edit", "Edit", new { id=item.PRODUCTID }) |
             @Html.ActionLink("Details", "Details", new { id=item.PRODUCTID }) |
-            @*@Html.ActionLink("Delete", "Delete", new { id=item.PRODUCTID })*@
+            @Html.ActionLink("Delete", "Delete", new { id=item.PRODUCTID })
         </td>
     </tr>
 }

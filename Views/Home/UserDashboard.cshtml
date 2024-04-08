@@ -11,8 +11,10 @@
     {
         <text>Welcome @Session["UserName"].ToString()</text>
     }
-    <h1><li>@Html.ActionLink("Departments", "Index", "DEPARTMENTs")</li></h1>
-    <h1><li>@Html.ActionLink("Categories", "Index", "Categories")</li></h1>
+    <h1><li>@Html.ActionLink("Departments", "CustomerView", "DEPARTMENTs")</li></h1>
+    <h1><li>@Html.ActionLink("Categories", "CustomerView", "CATEGORies")</li></h1>
+    <h1><li>@Html.ActionLink("Products", "CustomerView", "PRODUCTs")</li></h1>
+
 
 
 </fieldset>

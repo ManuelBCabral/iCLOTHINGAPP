@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Group12_iCLOTHINGAPP.Models.PRODUCT>
+
+@{
+    ViewBag.Title = "CustomerView";
+}
+
+<h2>Products</h2>
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PRODUCTNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCIPTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRICE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QUANTITY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BRAND.BRANDNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CATEGORY.CATNAME)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRODUCTNAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DESCIPTION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRICE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QUANTITY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BRAND.BRANDNAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CATEGORY.CATNAME)
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { id=item.PRODUCTID }) |*@
+                @Html.ActionLink("Details", "Details", new { id = item.PRODUCTID }) 
+                @*@Html.ActionLink("Delete", "Delete", new { id=item.PRODUCTID })*@
+            </td>
+        </tr>
+    }
+
+</table>
