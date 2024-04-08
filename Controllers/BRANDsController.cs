@@ -127,5 +127,15 @@ namespace Group12_iCLOTHINGAPP.Controllers
         {
             return View(db.BRAND.ToList());
         }
+        public ActionResult FilteredCustomerView(string brandID, BRAND brand)
+        {
+            using (Group12_iCLOTHINGDBEntities2 db = new Group12_iCLOTHINGDBEntities2())
+            {
+                var products = db.PRODUCT.Where(c => c.BRANDID == brandID).ToList();
+                return View(products);
+            }
+
+
+        }
     }
 }

@@ -1,16 +1,16 @@
 ﻿@model IEnumerable<Group12_iCLOTHINGAPP.Models.PRODUCT>
 
 @{
-    ViewBag.Title = "FilteredCustomerViewPro";
+    ViewBag.Title = "FilteredCustomerView";
 }
 
+<h2>
+    @*@Html.Display()*@
+</h2>
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.PRODUCTNAME)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PRODUCTID)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.DESCIPTION)
@@ -21,6 +21,7 @@
         <th>
             @Html.DisplayNameFor(model => model.QUANTITY)
         </th>
+        
         @*<th>
             @Html.DisplayNameFor(model => model.BRAND.BRANDNAME)
         </th>*@
@@ -37,9 +38,6 @@
                 @Html.DisplayFor(modelItem => item.PRODUCTNAME)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PRODUCTID)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.DESCIPTION)
             </td>
             <td>
@@ -48,6 +46,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.QUANTITY)
             </td>
+            
             @*<td>
             @Html.DisplayFor(modelItem => item.BRAND.BRANDNAME)
         </td>*@
@@ -57,7 +56,7 @@
             <td>
                 @*@Html.ActionLink("Edit", "Edit", new { id=item.PRODUCTID }) |*@
                 @*@Html.ActionLink("Details", "Details", new { id = item.PRODUCTID })|*@
-                @Html.ActionLink("Add To Cart", "CreateShop", "SHOPPINGCARTs")
+                @Html.ActionLink("Add To Cart", "Create", "SHOPPINGCARTs")
 
                 @*@Html.ActionLink("Delete", "Delete", new { id=item.PRODUCTID })*@
             </td>
@@ -65,3 +64,4 @@
     }
 
 </table>
+

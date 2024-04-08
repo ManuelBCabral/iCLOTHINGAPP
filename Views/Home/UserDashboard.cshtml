@@ -79,8 +79,8 @@
 
             <div class="gridbox-container" style="font-weight:bold">
                 <h4>@Html.ActionLink("Departments", "CustomerView", "DEPARTMENTs")</h4>
-                <h4>@Html.ActionLink("Categories", "CustomerView", "CATEGORies")</h4>
-                <h4>@Html.ActionLink("Products", "CustomerView", "PRODUCTs")</h4>
+                @*<h4>@Html.ActionLink("Categories", "CustomerView", "CATEGORies")</h4>*@
+                @*<h4>@Html.ActionLink("Products", "CustomerView", "PRODUCTs")</h4>*@
                 <h4>@Html.ActionLink("Brands", "CustomerView", "BRANDs")</h4>
 
 
@@ -103,7 +103,7 @@
                 <div class="btn-group">
                     <button>@Html.ActionLink("Logout", "Index", "Home")</button>
                     @*<h4>@Html.ActionLink("Shopping Cart", "CustomerView", "SHOPPINGCARTs", new { @class = "button" })</h4>*@
-                    <button>@Html.ActionLink("Shopping Cart","CustomerView","SHOPPINGCARTs")</button>
+                    <button>@Html.ActionLink("Shopping Cart","ShoppingCartView",new { CustID = Session["UserName"] })</button>
                 </div>
             </header>
 

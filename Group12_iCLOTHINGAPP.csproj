@@ -362,6 +362,11 @@
     <Content Include="Views\DEPARTMENTs\FilteredCustomerView.cshtml" />
     <Content Include="Views\CATEGORies\FilteredCustomerViewPro.cshtml" />
     <Content Include="Views\DEPARTMENTs\FilteredCustomerViewPro.cshtml" />
+    <Content Include="Views\BRANDs\FilteredCustomerView.cshtml" />
+    <Content Include="Views\BRANDs\ShoppingCartView.cshtml" />
+    <Content Include="Views\DEPARTMENTs\ShoppingCartView.cshtml" />
+    <Content Include="Views\Home\ShoppingCartView.cshtml" />
+    <Content Include="Views\SHOPPINGCARTs\CreateShopp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -147,6 +148,15 @@ namespace Group12_iCLOTHINGAPP.Controllers
             }
 
 
+        }
+        public ActionResult ShoppingCartView(string CustId) {
+            using (Group12_iCLOTHINGDBEntities2 db = new Group12_iCLOTHINGDBEntities2())
+            {
+                //SHOPPINGCART sHOPPINGCART = new SHOPPINGCART(CustId, price, quantity, CustId, proID);
+                //db.SHOPPINGCART.Add(sHOPPINGCART);
+                var products = db.SHOPPINGCART.Where(c => c.CUSTID == CustId).ToList();
+                return View(products);
+            }
         }
     }
 }

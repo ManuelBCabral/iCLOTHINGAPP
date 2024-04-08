@@ -27,7 +27,7 @@
             <td>
                 @*@Html.ActionLink("Edit", "Edit", new { id = item.BRANDID }) |*@
                 @Html.ActionLink("Details", "Details", new { id = item.BRANDID }) |
-                @Html.ActionLink("View Products", "CustomerView", "PRODUCTs") 
+                @Html.ActionLink("View Products", "FilteredCustomerView", new {brandID = item.BRANDID}, new {brand = item}) 
                 @*@Html.ActionLink("Delete", "Delete", new { id = item.BRANDID })*@
             </td>
         </tr>

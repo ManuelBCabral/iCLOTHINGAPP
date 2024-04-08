@@ -132,10 +132,22 @@ namespace Group12_iCLOTHINGAPP.Controllers
             }
             base.Dispose(disposing);
         }
-        public ActionResult CustomerView()
+        public ActionResult CustomerView(string CustID)
         {
-            return View(db.SHOPPINGCART.ToList());
+            using (Group12_iCLOTHINGDBEntities2 db = new Group12_iCLOTHINGDBEntities2())
+            {
+                SHOPPINGCART newshopp = new SHOPPINGCART();
+                var Shopping = db.SHOPPINGCART.Where(c => c.CUSTID == CustID).ToList();
+                return View(Shopping);
+            }
+            //return View(db.SHOPPINGCART.ToList());
 
+        }
+        public ActionResult CreateShopp(string CustID, string proID)
+        {
+            ViewData["proID"] = proID;
+            return View();
+            
         }
     }
 }
