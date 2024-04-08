@@ -44,7 +44,7 @@ namespace Group12_iCLOTHINGAPP.Controllers
                     var obj = db.USERPASSWORD.Where(a => a.ACCNAME.Equals(objUser.ACCNAME) && a.ENCRYPTPASS.Equals(objUser.ENCRYPTPASS)).FirstOrDefault();
                     if (obj != null)
                     {
-                        //Session["UserID"] = obj.UserId.ToString();
+                        Session["UserID"] = obj.USERID.ToString();
                         Session["UserName"] = obj.ACCNAME.ToString();
                         return RedirectToAction("UserDashBoard");
                     }

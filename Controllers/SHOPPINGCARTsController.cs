@@ -143,8 +143,7 @@ namespace Group12_iCLOTHINGAPP.Controllers
             //return View(db.SHOPPINGCART.ToList());
 
         }
-<<<<<<< Updated upstream
-=======
+
         public ActionResult CreateShopp(string CustID, string proID)
         {
             ViewData["proID"] = proID;
@@ -179,9 +178,8 @@ namespace Group12_iCLOTHINGAPP.Controllers
             db.SHOPPINGCART.Add(cartItem);
             db.SaveChanges();
 
-            return RedirectToAction(cartItem);
+            return View(cartItem);
         }
->>>>>>> Stashed changes
 
     }
 }

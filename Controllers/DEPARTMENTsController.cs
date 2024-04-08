@@ -171,6 +171,37 @@ namespace Group12_iCLOTHINGAPP.Controllers
             return View(db.DEPARTMENT.ToList());
 
         }
+        public ActionResult AddToCart(string productId)
+        {
+            Random rn = new Random();
+
+            string customerId = Session["UserID"].ToString();
+
+            if (productId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var product = db.PRODUCT.Find(productId);
+            if (product == null)
+            {
+                return HttpNotFound();
+            }
+
+            SHOPPINGCART cartItem = new SHOPPINGCART
+            {
+                CARTID = rn.Next(1,100).ToString(),
+                CARTPROPRICE = product.PRICE,
+                CARTPROQUANTITY = product.QUANTITY,
+                CUSTID = customerId,
+                PRODID = productId
+            };
+
+            db.SHOPPINGCART.Add(cartItem);
+            db.SaveChanges();
+
+            return View(cartItem);
+        }
     }
 }
     

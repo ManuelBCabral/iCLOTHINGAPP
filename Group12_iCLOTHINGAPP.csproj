@@ -369,6 +369,7 @@
     <Content Include="Views\ABOUTUS\CustomerView.cshtml" />
     <Content Include="Views\DEPARTMENTs\FilteredRegularViewPro.cshtml" />
     <Content Include="Views\DEPARTMENTs\RegularView.cshtml" />
+    <Content Include="Views\DEPARTMENTs\AddToCart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
