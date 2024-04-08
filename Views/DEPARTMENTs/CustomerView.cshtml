@@ -29,7 +29,7 @@
             <td>
                 @*@Html.ActionLink("Edit", "Edit", new { id=item.DEPID }) |*@
                 @Html.ActionLink("Details", "Details", new { id = item.DEPID }) |
-                @Html.ActionLink("View Catagories", "FilteredCustomerView", "CATEGORies") 
+                @Html.ActionLink("View Catagories", "FilteredCustomerView",new {DepdepId = item.DEPID}) 
 
                 @*@Html.ActionLink("Delete", "Delete", new { id=item.DEPID })*@
             </td>

@@ -128,6 +128,18 @@ namespace Group12_iCLOTHINGAPP.Controllers
             return View(db.DEPARTMENT.ToList());
 
         }
+        public ActionResult FilteredCustomerView(string DepdepId)
+        {
+            using (Group12_iCLOTHINGDBEntities2 db = new Group12_iCLOTHINGDBEntities2())
+            {
+                var categories = db.CATEGORY.Where(c => c.DEPID == DepdepId).ToList();
+                return View(categories);
+                //var ViewModel = new CATEGORY();
+                //ViewModel.CATID = db.CATEGORY.Include(x => x.DEPID == objUser.DEPID).ToList();
+            }
+
+
+        }
     }
     
 

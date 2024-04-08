@@ -359,6 +359,7 @@
     <Content Include="Views\PRODUCTs\RegularView.cshtml" />
     <Content Include="Views\CATEGORies\FilteredCustomerView.cshtml" />
     <Content Include="Views\BRANDs\CustomerView.cshtml" />
+    <Content Include="Views\DEPARTMENTs\FilteredCustomerView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
