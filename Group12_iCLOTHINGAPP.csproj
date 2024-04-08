@@ -360,6 +360,8 @@
     <Content Include="Views\CATEGORies\FilteredCustomerView.cshtml" />
     <Content Include="Views\BRANDs\CustomerView.cshtml" />
     <Content Include="Views\DEPARTMENTs\FilteredCustomerView.cshtml" />
+    <Content Include="Views\CATEGORies\FilteredCustomerViewPro.cshtml" />
+    <Content Include="Views\DEPARTMENTs\FilteredCustomerViewPro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
