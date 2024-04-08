@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Group12_iCLOTHINGAPP.Models.BRAND>
+
+@{
+    ViewBag.Title = "CustomerView";
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BRANDNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCRIPTION)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BRANDNAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DESCRIPTION)
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.BRANDID }) |*@
+                @Html.ActionLink("Details", "Details", new { id = item.BRANDID }) |
+                @Html.ActionLink("View Products", "CustomerView", "PRODUCTs") 
+                @*@Html.ActionLink("Delete", "Delete", new { id = item.BRANDID })*@
+            </td>
+        </tr>
+    }
+
+</table>
