@@ -12,9 +12,9 @@
         <th>
             @Html.DisplayNameFor(model => model.DESCRIPTION)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.DEPARTMENT.DEPNAME)
-        </th>
+        </th>*@
         <th></th>
     </tr>
 
@@ -27,9 +27,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.DESCRIPTION)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DEPARTMENT.DEPNAME)
-            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item. DEPARTMENT.DEPNAME)
+            </td>*@
             <td>
                 @*@Html.ActionLink("Edit", "Edit", new { id = item.CATID }) |*@
                 @Html.ActionLink("Details", "Details", new { id = item.CATID })
