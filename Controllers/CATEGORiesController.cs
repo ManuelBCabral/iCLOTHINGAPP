@@ -139,17 +139,17 @@ namespace Group12_iCLOTHINGAPP.Controllers
         //    return View();
         //}
 
-        //public ActionResult FilteredCustomerView(string DepdepId)
-        //{
-        //    using (Group12_iCLOTHINGDBEntities2 db = new Group12_iCLOTHINGDBEntities2())
-        //    {
-        //        var categories = db.CATEGORY.Where(c => c.DEPID == DepdepId).ToList();
-        //        return View(categories);
-        //        //var ViewModel = new CATEGORY();
-        //        //ViewModel.CATID = db.CATEGORY.Include(x => x.DEPID == objUser.DEPID).ToList();
-        //    }
-            
+        public ActionResult FilteredCustomerView(string CatId)
+        {
+            using (Group12_iCLOTHINGDBEntities2 db = new Group12_iCLOTHINGDBEntities2())
+            {
+                var products = db.PRODUCT.Where(c => c.CATID == CatId).ToList();
+                return View(products);
+                //var ViewModel = new CATEGORY();
+                //ViewModel.CATID = db.CATEGORY.Include(x => x.DEPID == objUser.DEPID).ToList();
+            }
 
-        //}
-    }
+
+            }
+        }
 }

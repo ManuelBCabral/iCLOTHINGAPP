@@ -30,11 +30,13 @@
             @*<td>
                 @Html.DisplayFor(modelItem => item. DEPARTMENT.DEPNAME)
             </td>*@
-            <td>
-                @*@Html.ActionLink("Edit", "Edit", new { id = item.CATID }) |*@
-                @Html.ActionLink("Details", "Details", new { id = item.CATID })
-                @*@Html.ActionLink("Delete", "Delete", new { id = item.CATID })*@
-            </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id = item.CATID }) |*@
+            @*@Html.ActionLink("Details", "Details", new { id = item.CATID })*@
+            @Html.ActionLink("View Products", "FilteredCustomerView", new { CatId = item.CATID })
+
+            @*@Html.ActionLink("Delete", "Delete", new { id = item.CATID })*@
+        </td>
         </tr>
     }
 
