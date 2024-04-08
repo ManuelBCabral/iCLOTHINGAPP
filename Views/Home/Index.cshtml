@@ -27,6 +27,30 @@
             font-size: 16px;
             cursor: pointer;
         }
+        .btn-group button {
+            background-color: #000f; /* Green background */
+            border: 1px solid black; /* Green border */
+            color: white; /* White text */
+            padding: 10px 24px; /* Some padding */
+            cursor: pointer; /* Pointer/hand icon */
+            float: left; /* Float the buttons side by side */
+        }
+
+            .btn-group button:not(:last-child) {
+                border-right: none; /* Prevent double borders */
+            }
+
+        /* Clear floats (clearfix hack) */
+        .btn-group:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Add a background color on hover */
+        .btn-group button:hover {
+            background-color: #808080;
+        }
     </style>
 </head>
 <body class="w3-content" style="max-width:1200px">
@@ -66,7 +90,7 @@
             <p class="w3-left">iCLOTHING</p>
             <p class="w3-right">
 
-                    <h4>@Html.ActionLink("Login", "PreLogin", "Home", new { @class = "button"})</h4>
+                    <button>@Html.ActionLink("Login", "PreLogin", "Home")</button>
             </p>
         </header>
 
