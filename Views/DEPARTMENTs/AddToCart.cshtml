@@ -21,27 +21,29 @@
         <th></th>
     </tr>
 
-    
-    
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => Model.CARTPROPRICE)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.CARTPROQUANTITY)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.CUSTOMER.NAME)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.PRODUCT.PRODUCTNAME)
-            </td>
-            <td>
-                @*@Html.ActionLink("Edit", "Edit", new { id = item.CARTID }) |*@
-                @Html.ActionLink("Details", "Details", new { id = Model.CARTID }) |
-                @*@Html.ActionLink("Delete", "Delete", new { id = item.CARTID })*@
-            </td>
-        </tr>
-    
+
+
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => Model.CARTPROPRICE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.CARTPROQUANTITY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.CUSTOMER.NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.PRODUCT.PRODUCTNAME)
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id = item.CARTID }) |*@
+            @Html.ActionLink("Details", "Details", new { id = Model.CARTID })
+            @*@Html.ActionLink("Delete", "Delete", new { id = item.CARTID })*@
+        </td>
+    </tr>
+    <h1>@Html.ActionLink("Return", "UserDashboard", "Home")</h1>
+
+
 
 </table>

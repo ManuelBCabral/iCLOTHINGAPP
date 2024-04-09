@@ -1,0 +1,44 @@
+﻿@model Group12_iCLOTHINGAPP.Models.ORDERSTATUS
+
+@{
+    ViewBag.Title = "AddOrderStatus";
+}
+
+<h2><table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.STATUS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STATUSDATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STATUSID)
+        </th>
+        <th></th>
+    </tr>
+
+
+
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => Model.STATUS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.STATUSDATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.STATUSID)
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id = item.CARTID }) |*@
+            @*@Html.ActionLink("Details", "Details", new { id = Model.CARTID })*@
+            @*@Html.ActionLink("Delete", "Delete", new { id = item.CARTID })*@
+        </td>
+    </tr>
+    <h1>@Html.ActionLink("Return", "UserDashboard", "Home")</h1>
+
+
+
+</table></h2>
+

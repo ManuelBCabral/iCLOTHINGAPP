@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Security.Policy;
 using System.Web;
 using System.Web.Mvc;
 using Group12_iCLOTHINGAPP.Models;
@@ -121,7 +122,7 @@ namespace Group12_iCLOTHINGAPP.Controllers
             SHOPPINGCART sHOPPINGCART = db.SHOPPINGCART.Find(id);
             db.SHOPPINGCART.Remove(sHOPPINGCART);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("CustomerView");
         }
 
         protected override void Dispose(bool disposing)
@@ -132,24 +133,20 @@ namespace Group12_iCLOTHINGAPP.Controllers
             }
             base.Dispose(disposing);
         }
-        public ActionResult CustomerView(string CustID)
+        public ActionResult CustomerView()
         {
             using (Group12_iCLOTHINGDBEntities2 db = new Group12_iCLOTHINGDBEntities2())
             {
                 SHOPPINGCART newshopp = new SHOPPINGCART();
-                var Shopping = db.SHOPPINGCART.Where(c => c.CUSTID == CustID).ToList();
+                var userID = Session["UserID"].ToString();
+                var Shopping = db.SHOPPINGCART.Where(c => c.CUSTID == userID).ToList();
                 return View(Shopping);
             }
             //return View(db.SHOPPINGCART.ToList());
 
         }
 
-        public ActionResult CreateShopp(string CustID, string proID)
-        {
-            ViewData["proID"] = proID;
-            return View();
-            
-        }
+        
 
         public ActionResult AddToCart(string productId)
         {
@@ -180,6 +177,35 @@ namespace Group12_iCLOTHINGAPP.Controllers
 
             return View(cartItem);
         }
+        public ActionResult AddOrderStatus(string cartId) {
 
+            Random rn = new Random();
+            string customerId = Session["UserID"].ToString();
+
+            if (cartId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var cart = db.SHOPPINGCART.Find(cartId);
+            if (cart == null)
+            {
+                return HttpNotFound();
+            }
+
+            ORDERSTATUS orderItem = new ORDERSTATUS
+            {
+                STATUSID = rn.Next(1, 1000).ToString(),
+                STATUS = "Pending",
+                STATUSDATE = DateTime.Now,
+                CARTID = cartId
+            };
+
+            db.ORDERSTATUS.Add(orderItem);
+            db.SaveChanges();
+
+            return View(orderItem);
+        }
     }
+
 }

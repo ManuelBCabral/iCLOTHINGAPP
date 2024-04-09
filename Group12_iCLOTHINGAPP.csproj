@@ -364,12 +364,14 @@
     <Content Include="Views\DEPARTMENTs\FilteredCustomerViewPro.cshtml" />
     <Content Include="Views\BRANDs\FilteredCustomerView.cshtml" />
     <Content Include="Views\BRANDs\ShoppingCartView.cshtml" />
-    <Content Include="Views\DEPARTMENTs\ShoppingCartView.cshtml" />
     <Content Include="Views\Home\ShoppingCartView.cshtml" />
     <Content Include="Views\ABOUTUS\CustomerView.cshtml" />
     <Content Include="Views\DEPARTMENTs\FilteredRegularViewPro.cshtml" />
     <Content Include="Views\DEPARTMENTs\RegularView.cshtml" />
     <Content Include="Views\DEPARTMENTs\AddToCart.cshtml" />
+    <Content Include="Views\BRANDs\FilteredCustomerViewPro.cshtml" />
+    <Content Include="Views\BRANDs\AddToCart.cshtml" />
+    <Content Include="Views\SHOPPINGCARTs\AddOrderStatus.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -102,8 +102,9 @@
             <header class="w3-container w3-xlarge">
                 <div class="btn-group">
                     <button>@Html.ActionLink("Logout", "Index", "Home")</button>
-                    @*<h4>@Html.ActionLink("Shopping Cart", "CustomerView", "SHOPPINGCARTs", new { @class = "button" })</h4>*@
-                    <button>@Html.ActionLink("Shopping Cart","ShoppingCartView",new { CustID = Session["UserID"] })</button>
+                    @*<button>@Html.ActionLink("Shopping Cart", "ShoppingCartView", new { CustID = Session["UserID"] })</button>*@
+                    <button>@Html.ActionLink("Shopping Cart", "CustomerView","SHOPPINGCARTs")</button>
+
                 </div>
             </header>
 

@@ -190,7 +190,7 @@ namespace Group12_iCLOTHINGAPP.Controllers
 
             SHOPPINGCART cartItem = new SHOPPINGCART
             {
-                CARTID = rn.Next(1,100).ToString(),
+                CARTID = rn.Next(1,1000).ToString(),
                 CARTPROPRICE = product.PRICE,
                 CARTPROQUANTITY = product.QUANTITY,
                 CUSTID = customerId,

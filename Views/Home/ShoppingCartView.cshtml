@@ -16,10 +16,10 @@
             @Html.DisplayNameFor(model => model.CARTPROQUANTITY)
         </th>
         @*<th>
-            @Html.DisplayNameFor(model => model.CUSTOMER.NAME)
-        </th>*@
+                @Html.DisplayNameFor(model => model.CUSTOMER.NAME)
+            </th>*@
         <th>
-            @Html.DisplayNameFor(model => model.PRODUCT.PRODUCTNAME)
+            @Html.DisplayNameFor(model => model.PRODID)
         </th>
         <th></th>
     </tr>
@@ -34,17 +34,23 @@
                 @Html.DisplayFor(modelItem => item.CARTPROQUANTITY)
             </td>
             @*<td>
-                @Html.DisplayFor(modelItem => item.CUSTOMER.NAME)
-            </td>*@
+                    @Html.DisplayFor(modelItem => item.CUSTOMER.NAME)
+                </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.PRODID)
             </td>
             <td>
                 @*@Html.ActionLink("Edit", "Edit", new { id = item.CARTID }) |*@
-                @Html.ActionLink("Details", "Details", new { id = item.CARTID }) |
-                @*@Html.ActionLink("Delete", "Delete", new { id = item.CARTID })*@
+                @*@Html.ActionLink("Details", "Details", new { id = item.CARTID })*@
+                @Html.ActionLink("Delete", "Delete", new { id = item.CARTID })
             </td>
         </tr>
     }
+    <div class="form-horizontal">
+        <h1>
+            @Html.ActionLink("Create Order", "Create", "Order Status") |
+            @Html.ActionLink("Return", "UserDashboard")
 
+        </h1>
+    </div>
 </table>

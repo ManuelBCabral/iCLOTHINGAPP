@@ -4,9 +4,6 @@
     ViewBag.Title = "CustomerView";
 }
 
-<h2>Shopping Carts</h2>
-
-
 <table class="table">
     <tr>
         <th>
@@ -15,11 +12,11 @@
         <th>
             @Html.DisplayNameFor(model => model.CARTPROQUANTITY)
         </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.CUSTOMER.NAME)
+            </th>*@
         <th>
-            @Html.DisplayNameFor(model => model.CUSTOMER.NAME)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PRODUCT.PRODUCTNAME)
+            @Html.DisplayNameFor(model => model.PRODID)
         </th>
         <th></th>
     </tr>
@@ -33,19 +30,29 @@
             <td>
                 @Html.DisplayFor(modelItem => item.CARTPROQUANTITY)
             </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.CUSTOMER.NAME)
+                </td>*@
             <td>
-                @Html.DisplayFor(modelItem => item.CUSTOMER.NAME)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PRODUCT.PRODUCTNAME)
+                @Html.DisplayFor(modelItem => item.PRODID)
             </td>
             <td>
                 @*@Html.ActionLink("Edit", "Edit", new { id = item.CARTID }) |*@
-                @Html.ActionLink("Details", "Details", new { id = item.CARTID }) |
-                @*@Html.ActionLink("Delete", "Delete", new { id = item.CARTID })*@
+                @*@Html.ActionLink("Details", "Details", new { id = item.CARTID })*@
+                @Html.ActionLink("Delete", "Delete", new { id = item.CARTID })
+                @Html.ActionLink("Create Order", "AddOrderStatus", new { cartId = item.CARTID })
             </td>
         </tr>
     }
+<div class="form-horizontal">
+    <h1>
+        
+        @Html.ActionLink("Return", "UserDashboard","Home")
+
+    </h1>
+</div>
+    
+
 
 </table>
 
