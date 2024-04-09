@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Group12_iCLOTHINGAPP.Models.SHOPPINGCART>
+﻿@model Group12_iCLOTHINGAPP.Models.SHOPPINGCART
 
 @{
     ViewBag.Title = "AddToCart";
@@ -21,27 +21,27 @@
         <th></th>
     </tr>
 
-    @foreach (var item in Model)
-    {
+    
+    
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.CARTPROPRICE)
+                @Html.DisplayFor(modelItem => Model.CARTPROPRICE)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CARTPROQUANTITY)
+                @Html.DisplayFor(modelItem => Model.CARTPROQUANTITY)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CUSTOMER.NAME)
+                @Html.DisplayFor(modelItem => Model.CUSTOMER.NAME)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PRODUCT.PRODUCTNAME)
+                @Html.DisplayFor(modelItem => Model.PRODUCT.PRODUCTNAME)
             </td>
             <td>
                 @*@Html.ActionLink("Edit", "Edit", new { id = item.CARTID }) |*@
-                @Html.ActionLink("Details", "Details", new { id = item.CARTID }) |
+                @Html.ActionLink("Details", "Details", new { id = Model.CARTID }) |
                 @*@Html.ActionLink("Delete", "Delete", new { id = item.CARTID })*@
             </td>
         </tr>
-    }
+    
 
 </table>
